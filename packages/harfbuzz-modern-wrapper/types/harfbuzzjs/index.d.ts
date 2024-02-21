@@ -1,4 +1,4 @@
-declare module "harfbuzzjs/hb.wasm" {
+declare module "@alsoasked/harfbuzzjs/hb.wasm" {
   export class HBBinary {}
 
   // I don't know why, but webpack interprets
@@ -7,7 +7,7 @@ declare module "harfbuzzjs/hb.wasm" {
   export default instance;
 }
 
-declare module "harfbuzzjs/hbjs.js" {
+declare module "@alsoasked/harfbuzzjs/hbjs.js" {
   export class HBBlob {
     destroy();
   }

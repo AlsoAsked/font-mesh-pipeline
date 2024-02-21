@@ -1,5 +1,5 @@
-import * as hbInstance from "harfbuzzjs/hb.wasm";
-import hbjs, { HBBlob, HBFace, HBFont, HBHandle } from "harfbuzzjs/hbjs.js";
+import * as hbInstance from "@alsoasked/harfbuzzjs/hb.wasm";
+import hbjs, { HBBlob, HBFace, HBFont, HBHandle } from "@alsoasked/harfbuzzjs/hbjs.js";
 import bidiFactory from "bidi-js";
 
 const bidi = bidiFactory();
