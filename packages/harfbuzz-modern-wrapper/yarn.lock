@@ -9,11 +9,18 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@alsoasked/harfbuzz-modern-wrapper@workspace:."
   dependencies:
+    "@alsoasked/harfbuzzjs": "npm:^0.3.4"
     bidi-js: "npm:^1.0.3"
-    harfbuzzjs: "npm:^0.3.4"
     typescript: "npm:^5.3.3"
   languageName: unknown
   linkType: soft
+
+"@alsoasked/harfbuzzjs@npm:^0.3.4":
+  version: 0.3.4
+  resolution: "@alsoasked/harfbuzzjs@npm:0.3.4"
+  checksum: 10c0/1373c1aa6685fe8f35e1b9301ffafd47bcd78739b372b1a8688733fe037ac39a4b5dcd853c4db9e18f89fb46ed3e3df2eb63394c54ebc0a4da4d87e7b0de0b6a
+  languageName: node
+  linkType: hard
 
 "bidi-js@npm:^1.0.3":
   version: 1.0.3
@@ -21,13 +28,6 @@ __metadata:
   dependencies:
     require-from-string: "npm:^2.0.2"
   checksum: 10c0/fdddea4aa4120a34285486f2267526cd9298b6e8b773ad25e765d4f104b6d7437ab4ba542e6939e3ac834a7570bcf121ee2cf6d3ae7cd7082c4b5bedc8f271e1
-  languageName: node
-  linkType: hard
-
-"harfbuzzjs@npm:^0.3.4":
-  version: 0.3.4
-  resolution: "harfbuzzjs@npm:0.3.4"
-  checksum: 10c0/7136765ea64c55f80d633f7dad1c395eb7acbde1d1e7c4b3abab625dc808c8c1026753f4572d6e9b7bb2beee99ec93819e32757d80473bc0bbc1f04b3af5b12b
   languageName: node
   linkType: hard
 
