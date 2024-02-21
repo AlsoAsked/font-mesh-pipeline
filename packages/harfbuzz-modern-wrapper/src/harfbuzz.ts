@@ -1,4 +1,4 @@
-import hbInstance from "harfbuzzjs/hb.wasm";
+import * as hbInstance from "harfbuzzjs/hb.wasm";
 import hbjs, { HBBlob, HBFace, HBFont, HBHandle } from "harfbuzzjs/hbjs.js";
 import bidiFactory from "bidi-js";
 
