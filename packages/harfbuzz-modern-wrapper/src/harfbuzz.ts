@@ -17,12 +17,19 @@ export type SVGPathCommand =
   | { type: "C"; values: [number, number, number, number, number, number] }
   | { type: "Z"; values: [] };
 
+export type Extents = {
+  ascender: number;
+  descender: number;
+  lineGap: number;
+};
+
 export interface Font {
   get upem(): number;
 
   shape(text: string): { glyphs: GlyphLayout[]; bounds: Bounds };
   glyphName(id: number): string;
   glyphGeometry(id: number): SVGPathCommand[];
+  extents(): Extents;
 }
 
 class FontImpl implements Font {
@@ -123,6 +130,10 @@ class FontImpl implements Font {
 
   glyphGeometry(id: number) {
     return this.font.glyphToJson(id);
+  }
+
+  extents() {
+    return this.font.extents();
   }
 
   // the client will never call this directly.

@@ -25,10 +25,17 @@ declare module "@alsoasked/harfbuzzjs/hbjs.js" {
     | { type: "C"; values: [number, number, number, number, number, number] }
     | { type: "Z"; values: [] };
 
+  export type HBExtents = {
+    ascender: number;
+    descender: number;
+    lineGap: number;
+  };
+
   export class HBFont {
     glyphName(glyphId: number): string;
     glyphToPath(glyphId: number): string;
     glyphToJson(glyphId: number): SVGPathCommand[];
+    extents(): HBExtents;
 
     destroy();
   }
