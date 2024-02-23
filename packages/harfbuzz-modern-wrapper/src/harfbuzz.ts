@@ -30,6 +30,7 @@ export interface Font {
   glyphName(id: number): string;
   glyphGeometry(id: number): SVGPathCommand[];
   extents(): Extents;
+  collectUnicodes(): number[];
 }
 
 class FontImpl implements Font {
@@ -134,6 +135,10 @@ class FontImpl implements Font {
 
   extents() {
     return this.font.extents();
+  }
+
+  collectUnicodes() {
+    return this.face.collectUnicodes();
   }
 
   // the client will never call this directly.

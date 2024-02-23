@@ -15,6 +15,7 @@ declare module "@alsoasked/harfbuzzjs/hbjs.js" {
   export class HBFace {
     upem: number;
 
+    collectUnicodes(): number[];
     destroy();
   }
 
