@@ -161,8 +161,8 @@ export class HarfBuzzSingleton {
     return this.hb !== undefined;
   }
 
-  async init(wasm: BufferSource) {
-    const hbInstance = await WebAssembly.instantiate(wasm);
+  async init(wasmUrl: string) {
+    const hbInstance = await WebAssembly.instantiateStreaming(fetch(wasmUrl));
     this.hb = hbjs({ exports: hbInstance });
   }
 
