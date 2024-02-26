@@ -162,8 +162,8 @@ export class HarfBuzzSingleton {
   }
 
   async init(wasmUrl: string) {
-    const hbInstance = await WebAssembly.instantiateStreaming(fetch(wasmUrl));
-    this.hb = hbjs({ exports: hbInstance });
+    const wasm = await WebAssembly.instantiateStreaming(fetch(wasmUrl));
+    this.hb = hbjs(wasm.instance);
   }
 
   get fontIds() {
