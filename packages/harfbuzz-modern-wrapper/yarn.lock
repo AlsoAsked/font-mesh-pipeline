@@ -9,16 +9,16 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@alsoasked/harfbuzz-modern-wrapper@workspace:."
   dependencies:
-    "@alsoasked/harfbuzzjs": "npm:^0.3.6"
+    "@alsoasked/harfbuzzjs": "npm:^0.3.7"
     bidi-js: "npm:^1.0.3"
     typescript: "npm:^5.3.3"
   languageName: unknown
   linkType: soft
 
-"@alsoasked/harfbuzzjs@npm:^0.3.6":
-  version: 0.3.6
-  resolution: "@alsoasked/harfbuzzjs@npm:0.3.6"
-  checksum: 10c0/2dc5db774a3523f6dd0aa1e0e78bd0f39647eb592eea2da8858a2de24fdbc33984ad20fa8eec3670c4ff7aa193b594d032f096fc45c36bd9db9d0c91679fbd8e
+"@alsoasked/harfbuzzjs@npm:^0.3.7":
+  version: 0.3.7
+  resolution: "@alsoasked/harfbuzzjs@npm:0.3.7"
+  checksum: 10c0/994f52a5e92d9663ec7ac7d75a92c1abdf0e28f79fe7331871d1be89ccb085b70baa2767daa5e77d5c03229206c19f2351b71fccbb8912db741453f341f6a282
   languageName: node
   linkType: hard
 

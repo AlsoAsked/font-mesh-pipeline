@@ -1,4 +1,3 @@
-import * as hbInstance from "@alsoasked/harfbuzzjs/hb.wasm";
 import hbjs, { HBBlob, HBFace, HBFont, HBHandle } from "@alsoasked/harfbuzzjs/hbjs.js";
 import bidiFactory from "bidi-js";
 
@@ -154,7 +153,6 @@ class FontImpl implements Font {
 // all interactions with harfbuzz should be through this singleton
 // so that no leak in the webassembly memory are created
 export class HarfBuzzSingleton {
-  private initialisation: Promise<void>;
   private hb: HBHandle | undefined = undefined;
 
   private fonts = new Map<string, FontImpl>();
@@ -163,16 +161,9 @@ export class HarfBuzzSingleton {
     return this.hb !== undefined;
   }
 
-  constructor() {
-    this.initialisation = this.constructInstance();
-  }
-
-  private async constructInstance() {
-    this.hb = hbjs({ exports: await hbInstance });
-  }
-
-  async init() {
-    await this.initialisation;
+  async init(wasm: BufferSource) {
+    const hbInstance = await WebAssembly.instantiate(wasm);
+    this.hb = hbjs({ exports: hbInstance });
   }
 
   get fontIds() {

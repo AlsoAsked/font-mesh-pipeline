@@ -1,7 +1,7 @@
 {
   "name": "@alsoasked/harfbuzz-modern-wrapper",
   "description": "TypeScript wrapper for Harfbuzz font engine with bidirectional Unicode support",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "author": "alsoasked",
   "type": "module",
   "license": "MIT",
@@ -20,7 +20,7 @@
     "typescript": "^5.3.3"
   },
   "dependencies": {
-    "@alsoasked/harfbuzzjs": "^0.3.6",
+    "@alsoasked/harfbuzzjs": "^0.3.7",
     "bidi-js": "^1.0.3"
   },
   "packageManager": "yarn@4.1.0"
