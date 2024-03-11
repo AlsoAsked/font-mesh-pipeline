@@ -1,4 +1,3 @@
 export * from "./harfbuzz";
 export { default } from "./harfbuzz";
-
-export * from "./geom_cache";
+export { GlyphGeometryCache } from "./geom_cache";
