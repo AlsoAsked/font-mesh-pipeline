@@ -1,14 +1,14 @@
 {
   "name": "@alsoasked/harfbuzz-modern-wrapper",
   "description": "TypeScript wrapper for Harfbuzz font engine with bidirectional Unicode support",
-  "version": "0.0.19",
+  "version": "0.0.20",
   "author": "alsoasked",
   "type": "module",
   "license": "MIT",
   "homepage": "https://github.com/alsoasked/font-mesh-pipeline/tree/main/packages/harfbuzz-modern-wrapper",
   "repository": "github:alsoasked/font-mesh-pipeline",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "main": "lib/harfbuzz.js",
+  "types": "lib/harfbuzz.d.ts",
   "files": [
     "lib/**/*"
   ],
